@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-language" content="en" />
+  <link rel="shortlink" href="https://www.abhaypai.info/" />
+  <link rel="canonical" href="https://www.abhaypai.info/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Image Effect Flip</title>
+  <style>
+    body {
+      margin: 0px;
+      background-color: #ccc;
+    }
+    .image--effect__flip-wrapper {
+      padding: 10px;
+      outline: none;
+      cursor: pointer;
+      overflow: hidden;
+      max-width: 250px;
+      margin: 20px auto;
+      min-height: 250px;
+      position: relative;
+      background-color: #ededed;
+    }
+    .image--effect__flip-image {
+      width: 100%;
+      height: auto;
+      perspective: 1000px;
+      transition: all ease-in-out 1000ms;
+      -o-transition: all ease-in-out 1000ms;
+      -moz-transition: all ease-in-out 1000ms;
+      -webkit-transition: all ease-in-out 1000ms;
+    }
+    .image--effect__flip-caption {
+      left: 0;
+      right: 0px;
+      bottom: 0px;
+      padding: 5px;
+      color: #fff;
+      margin: 0 auto;
+      text-align: center;
+      position: absolute;
+      background-color: #337ab7;
+    }
+    .image--effect__flip-wrapper:hover .image--effect__flip-image,
+    .image--effect__flip-wrapper:focus .image--effect__flip-image,
+    .image--effect__flip-wrapper:focus-visible .image--effect__flip-image,
+    .image--effect__flip-wrapper:focus-within .image--effect__flip-image,
+    .image--effect__flip-wrapper:active .image--effect__flip-image {
+      transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+    }
+    .image--effect__flip-caption h2,
+    .image--effect__flip-caption p {
+      margin: 0px;
+    }
+  </style>
+</head>
+<body>
+  <figure class="image--effect__flip-wrapper">
+    <img src="https://via.placeholder.com/500/fff/337ab7/?text=Abhay+Pai" alt="Abhay Pai" class="image--effect__flip-image">
+    <figcaption class="image--effect__flip-caption">
+      <h2>CSS Image Effect flip</h2>
+      <p>To check effect you can scroll mouse over this image.</p>
+    </figcaption>
+  </figure>
+</body>
+</html>
